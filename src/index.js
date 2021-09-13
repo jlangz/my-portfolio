@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <head>
+      <title>Jakob Langseth - Portfolio</title>
+    </head>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
