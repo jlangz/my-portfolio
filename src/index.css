@@ -1,5 +1,6 @@
-@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
-@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Glory:ital@1&display=swap');
 
 .cursive {
@@ -14,4 +15,14 @@
 
 .home-name{
   font-size: 150px;
+}
+
+main{
+  padding-top: 6.25rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #link-wrapper, #social-wrapper{
+    display: none;
+  }
 }
