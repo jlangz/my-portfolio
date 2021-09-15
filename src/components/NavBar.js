@@ -14,11 +14,11 @@ export default function Navbar({ fixed }) {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     // const [fixed, setNavbarFixed] = React.useState(False)
     return (
-      <>
         <nav className="z-50 fixed w-screen flex flex-wrap items-center justify-between px-2 py-3 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                <NavLink exact to="/"
+                <NavLink onClick={() => setNavbarOpen(false)} 
+                    exact to="/"
                     className="inline-flex items-center mr-4 py-6 px-3 text-black hover:text-gray-800 text-4xl font-bold cursive tracking-widest"
                 >
                     <FontAwesomeIcon icon={faHome} /> Jakob
@@ -41,7 +41,7 @@ export default function Navbar({ fixed }) {
             >
               <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                 <li className="nav-item">
-                    <NavLink 
+                    <NavLink onClick={() => setNavbarOpen(!navbarOpen)}
                         className="font-bold inline-flex items-center py-3 px-3 m-5 rounded text-black hover:text-gray-700" to="/post"
                         activeClassName="bg-white bg-opacity-50"
                     >
@@ -49,7 +49,7 @@ export default function Navbar({ fixed }) {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink 
+                    <NavLink onClick={() => setNavbarOpen(!navbarOpen)}
                         className="font-bold inline-flex items-center py-3 px-3 m-5 rounded text-black hover:text-gray-700" to="/project"
                         activeClassName="bg-white bg-opacity-50"
                     >
@@ -57,7 +57,7 @@ export default function Navbar({ fixed }) {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink 
+                    <NavLink onClick={() => setNavbarOpen(!navbarOpen)}
                         className="font-bold inline-flex items-center py-3 px-3 m-5 rounded text-black hover:text-gray-700" to="/about"
                         activeClassName="bg-white bg-opacity-50"
                     >
@@ -68,7 +68,6 @@ export default function Navbar({ fixed }) {
             </div>
           </div>
         </nav>
-      </>
     );
   }
 
