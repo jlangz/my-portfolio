@@ -13,16 +13,6 @@
   border-radius: 5px;
 }
 
-.home-name{
-  font-size: 150px;
-}
-
-main{
-  padding-top: 6.25rem !important;
-}
-
-@media only screen and (max-width: 768px) {
-  #link-wrapper, #social-wrapper{
-    display: none;
-  }
+main>section:first-of-type:not(#home-hero-section){
+  padding-top: 8rem !important;
 }

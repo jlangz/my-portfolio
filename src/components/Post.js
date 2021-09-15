@@ -26,7 +26,7 @@ export default function Post() {
 
     return (
         <main className="bg-blue-100 min-h-screen">
-            <section className="container mx-auto p-12">
+            <section className="container mx-auto p-6 lg:p-12">
                 <h1 className="text-5xl flex justify-center cursive">Blog Posts</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">Look for a post you'd like to read</h2>
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -37,7 +37,7 @@ export default function Post() {
                         >
                                 <img src={post.mainImage.asset.url} alt={post.mainImage.alt} className="w-full h-full rounded-r object-cover absolute transition-all duration-200 filter group-hover:brightness-110 transform group-hover:scale-105" />
                                 <span className="relative h-full flex justify-end items-end pr-4 pb-4">
-                                    <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-blue-100 hover:text-blue-700 bg-opacity-88 rounded hover:bg-white">
+                                    <h3 className="text-gray-800 text-md lg:text-lg font-blog px-3 py-4 bg-blue-100 hover:text-blue-700 bg-opacity-88 rounded hover:bg-white">
                                         {post.title}
                                     </h3>
                                 </span>
